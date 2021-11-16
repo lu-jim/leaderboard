@@ -1,4 +1,4 @@
-# leaderboard
+# Leaderboard
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
@@ -8,7 +8,7 @@
 ![screenshot](./app_screenshot.png)
 
 Additional description about the project and its features.
-
+ko
 ## Built With
 
 - HTML&CSS
