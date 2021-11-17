@@ -6,14 +6,12 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    Leaderboard: './src/Leaderboard.js',
-    Score: './src/Score.js',
   },
   devServer: {
     open: true,
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
