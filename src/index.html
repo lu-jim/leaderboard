@@ -20,21 +20,21 @@
       <div class="col-12 col-lg-5 text-center">
         <div class="d-flex my-4">
           <h2>Recent scores</h2>
-          <input type="submit" name="add-score" id="add-score" value="Refresh"
+          <input type="submit" name="refresh" id="refresh" value="Refresh"
             class="btn btn-info btn-block ms-auto">
         </div>
 
-        <div id="board"></div>
+        <div id="board" class="box"></div>
       </div>
       <div class="col-12 col-lg-5 text-center">
         <h2 class="my-4">Add your score</h2>
         <div class="flex-container d-flex row justify-content-center">
           <form id="book-form" class="col-10 d-flex flex-column justify-content-center">
             <div class="form-group">
-              <input type="text" name="name" id="name" placeholder="Name" class="form-control my-4">
-              <input type="text" name="result" id="result" placeholder="Result" class="form-control my-4">
+              <input type="text" name="name" id="name" placeholder="Your name" class="box form-control my-4">
+              <input type="text" name="result" id="result" placeholder="Your score" class="box form-control my-4">
             </div>
-            <input type="submit" name="add-score" id="add-score" value="Add Book"
+            <input type="submit" name="add-score" id="add-score" value="Submit"
               class="btn btn-success btn-block ms-auto">
           </form>
         </div>
