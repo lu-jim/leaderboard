@@ -13,8 +13,8 @@ class Leaderboard {
 
   static showScore = (Score) => {
     const board = document.getElementById('board');
-    const row = Leaderboard.createNode('div', 'Score');
-    row.innerHTML = `<p class="w-100 d-flex justify-content-between p-2 m-0"> ${Score.name}: ${Score.score} </p>
+    const row = Leaderboard.createNode('div', 'score');
+    row.innerHTML = `<p class="w-100 d-flex justify-content-between p-2 m-0"> ${Score.name}: ${Score.result} </p>
     `;
     board.appendChild(row);
   };

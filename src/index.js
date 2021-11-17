@@ -1,5 +1,5 @@
 import Leaderboard from './Leaderboard.js';
-import Score from './Score.js';
+import { Score } from './Score.js';
 import './styles.css';
 
 const dummyLeader = [
@@ -10,5 +10,4 @@ const dummyLeader = [
   ['I am Súnlight', 1499],
 ];
 const dummyList = dummyLeader.map((entry) => new Score(...entry));
-
 document.addEventListener('DOMContentLoaded', Leaderboard.showBoard(dummyList));
