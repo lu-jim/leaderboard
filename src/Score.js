@@ -1,7 +1,7 @@
 class Score {
-  constructor(name, result) {
-    this.name = name;
-    this.result = result;
+  constructor(user, score) {
+    this.user = user;
+    this.score = score;
   }
 }
 
