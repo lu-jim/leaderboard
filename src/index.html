@@ -28,14 +28,14 @@
       <div class="col-12 col-lg-5 text-center">
         <h2 class="my-4">Add your score</h2>
         <div class="flex-container d-flex row justify-content-center">
-          <form id="book-form" class="col-10 d-flex flex-column justify-content-center">
+          <form id="score-form" class="col-10 d-flex flex-column justify-content-center">
             <div class="form-group">
-              <input type="text" name="name" id="name" placeholder="Your name" class="box form-control my-4">
-              <input type="text" name="result" id="result" placeholder="Your score" class="box form-control my-4">
+              <input type="text" name="user" id="user" placeholder="Your user" class="box form-control my-4">
+              <input type="text" name="score" id="score" placeholder="Your score" class="box form-control my-4">
+              <div id='submit-alert'>
+              </div>
             </div>
-            <input type="submit" name="add-score" id="add-score" value="Submit" accept-charset="utf-8"
-              action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/iY1b10i36owa57OM6eVR/scores/"
-              method="post" class="btn btn-success btn-block ms-auto">
+            <input type="submit" name="add-score" id="add-score" value="Submit" accept-charset="utf-8" method="post" class="btn btn-success btn-block ms-auto">
           </form>
         </div>
       </div>
