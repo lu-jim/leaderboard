@@ -9,7 +9,7 @@ class Leaderboard {
     const board = document.getElementById('board');
     const row = document.createElement('div');
     row.className = 'score';
-    row.innerHTML = `<p class="w-100 d-flex justify-content-between p-2 m-0"> ${Score.user}: ${Score.score} </p>`;
+    row.innerHTML = `<p class="w-100 d-flex justify-content-between py-2 px-5 m-0"> <span class="user">${Score.user}:</span> ${Score.score} </p>`;
     board.appendChild(row);
   };
 

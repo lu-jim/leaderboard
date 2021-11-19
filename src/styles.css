@@ -35,3 +35,7 @@ h2 {
 .box {
   border: 4px solid black;
 }
+
+.user {
+  font-weight: 500;
+}
