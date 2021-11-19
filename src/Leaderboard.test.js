@@ -12,8 +12,8 @@ describe('Initial setup', () => {
 describe('Board is shown', () => {
   it('Show item on board', () => {
     const dummyScore = {
-      name: 'Sn1per1',
-      result: 1804,
+      user: 'Sn1per1',
+      score: 1804,
     };
     document.body.innerHTML = '<div id="board"></div>';
     Leaderboard.showScore(dummyScore);
@@ -23,24 +23,24 @@ describe('Board is shown', () => {
   it('Show board in home', () => {
     const dummyBoard = [
       {
-        name: 'Sn1per1',
-        result: 1804,
+        user: 'Sn1per1',
+        score: 1804,
       },
       {
-        name: 'Oh ill Nam',
-        result: 1722,
+        user: 'Oh ill Nam',
+        score: 1722,
       },
       {
-        name: 'wx mjm978244659',
-        result: 1656,
+        user: 'wx mjm978244659',
+        score: 1656,
       },
       {
-        name: 'winstxn',
-        result: 1570,
+        user: 'winstxn',
+        score: 1570,
       },
       {
-        name: 'I am Súnlight',
-        result: 1499,
+        user: 'I am Súnlight',
+        score: 1499,
       },
     ];
     document.body.innerHTML = '<div id="board"></div>';

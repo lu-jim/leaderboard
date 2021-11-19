@@ -1,13 +1,28 @@
-import Leaderboard from './Leaderboard.js';
-import { Score } from './Score.js';
+import getBoard from './getBoard.js';
+import postScore from './postScore.js';
+import clearBoard from './clearBoard.js';
 import './styles.css';
 
-const dummyLeader = [
-  ['Sn1per1', 1804],
-  ['Oh ill Nam', 1722],
-  ['wx mjm978244659', 1656],
-  ['winstxn', 1570],
-  ['I am Súnlight', 1499],
-];
-const dummyList = dummyLeader.map((entry) => new Score(...entry));
-document.addEventListener('DOMContentLoaded', Leaderboard.showBoard(dummyList));
+const refresh = document.getElementById('refresh');
+const scoreForm = document.getElementById('score-form');
+const userField = document.getElementById('user');
+const scoreField = document.getElementById('score');
+const alertField = document.getElementById('submit-alert');
+
+document.addEventListener('DOMContentLoaded', getBoard());
+refresh.addEventListener('click', () => {
+  clearBoard();
+  getBoard();
+});
+
+scoreForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (userField.value && scoreField.value) {
+    postScore(userField.value, scoreField.value);
+    alertField.innerHTML = '';
+    userField.value = '';
+    scoreField.value = '';
+  } else if (!userField && scoreField) alertField.innerHTML = 'Please enter a valid user';
+  else if (!scoreField && userField) alertField.innerHTML = 'Please enter a valid score';
+  else alertField.innerHTML = 'Please enter a valid submission';
+});
