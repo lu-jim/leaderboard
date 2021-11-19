@@ -17,12 +17,15 @@ refresh.addEventListener('click', () => {
 
 scoreForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (userField.value && scoreField.value) {
+  const isValid = userField.value && scoreField.value && Number.isInteger(+scoreField.value);
+  if (isValid && +scoreField.value < 10000) {
     postScore(userField.value, scoreField.value);
     alertField.innerHTML = '';
+    alertField.className = 'd-none';
     userField.value = '';
     scoreField.value = '';
-  } else if (!userField && scoreField) alertField.innerHTML = 'Please enter a valid user';
-  else if (!scoreField && userField) alertField.innerHTML = 'Please enter a valid score';
-  else alertField.innerHTML = 'Please enter a valid submission';
+  } else {
+    alertField.className = 'danger py-2 alert alert-danger';
+    alertField.innerHTML = 'Please enter a valid entry:</br> No empty fields - Score must be a number between 0 and 9999';
+  }
 });
