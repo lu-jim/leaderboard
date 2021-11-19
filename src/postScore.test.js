@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { postScore } from './postScore.js';
+import postScore from './postScore.js';
 
 jest.mock('./postScore.js');
 
